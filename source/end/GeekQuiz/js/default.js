@@ -21,9 +21,9 @@
             var root = document.getElementById("root");
             var questionDiv = document.getElementById("question");
             var nextButton = document.getElementById("next");
-            var controller = new QuestionController(root, questionDiv, nextButton);
+            var viewModel = new QuizViewModel(root, questionDiv, nextButton);
 
-            controller.nextQuestion();
+            viewModel.nextQuestion();
         }
     };
 
