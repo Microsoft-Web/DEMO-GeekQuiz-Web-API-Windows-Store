@@ -7,24 +7,6 @@
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
 
-    WinJS.Namespace.define("Converters", {
-        boolToVisibilityConverter: WinJS.Binding.converter(function (answered) {
-            return answered ? "" : "none";
-        }),
-        inverseBoolToVisibilityConverter: WinJS.Binding.converter(function (answered) {
-            return !answered ? "" : "none";
-        }),
-        showingQuestionToVisibilityConverter:WinJS.Binding.converter(function (state) {
-            return state === "showingQuestion" ? "" : "none";
-        }),
-        showingAnswerToVisibilityConverter: WinJS.Binding.converter(function (state) {
-            return state === "showingAnswer" ? "" : "none";
-        }),
-        loadingToVisibilityConverter: WinJS.Binding.converter(function (state) {
-            return state === "loading" ? "" : "none";
-        }),
-    });
-
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
@@ -38,7 +20,8 @@
 
             var root = document.getElementById("root");
             var questionDiv = document.getElementById("question");
-            var controller = createQuestionController(root, questionDiv);
+            var nextButton = document.getElementById("next");
+            var controller = new QuestionController(root, questionDiv, nextButton);
 
             controller.nextQuestion();
         }
