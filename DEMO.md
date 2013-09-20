@@ -1,5 +1,5 @@
 ﻿<a name="title" />
-# Building a SPA interface using Ember.js #
+# Building a Windows Store front end #
 
 ---
 <a name="Overview" />
@@ -35,6 +35,8 @@ This demo is composed of the following segments:
 
 1. [Walkthrough of default.js](#segment1)
 1. [Walkthrough of viewModel.js](#segment2)
+1. [Walkthrough of default.html](#segment3)
+1. [Running the application](#segment4)
 
 <a name="segment1" />
 ### Walkthrough of default.js ###
@@ -84,7 +86,7 @@ This demo is composed of the following segments:
 
 1. Highlight the call to the `return WinJS.Class.define` function.
 
-	> **Speaking point:** Explain that this the way that you can create classes with WinJS. Source [here](http://msdn.microsoft.com/en-us/library/windows/apps/br229813.aspx). The class that we are creating is a view model. The set of properties of a view model instance at a particular point in time represent the state of the view.
+	> **Speaking point:** Explain that this the way that you can create classes with WinJS. Source [here](http://msdn.microsoft.com/en-us/library/windows/apps/br229813.aspx). The class that we are creating is a ViewModel. The set of properties of a ViewModel instance at a particular point in time represent the state of the view.
 
 1. Highlight the line highlighted in the following code snippet:
 	
@@ -174,7 +176,7 @@ This demo is composed of the following segments:
 	this.observable = WinJS.Binding.as(this);
 	````
 
-	> **Speaking point:** We are setting the view model instance as the binding source for the `root` element. After that, we are creating an observable (proxy) for the view model, so changes to properties are automatically reflected in the UI.
+	> **Speaking point:** We are setting the ViewModel instance as the binding source for the `root` element. After that, we are creating an observable (proxy) for the ViewModel, so changes to properties are automatically reflected in the UI.
 
 1. Highlight the `nextQuestion` method, which is included in the following code snippet:
 
@@ -260,3 +262,44 @@ This demo is composed of the following segments:
 					</div>
 			  </div>
 	````
+
+	> **Speaking point:** Explain that the ViewModel properties are bound to the different properties through the usage of the `data-win-bind` attribute. The visibility of these controls is determined by the binding declared in the `<div id="question" class="layout" data-win-bind="style.display: state Converters.showingQuestionToVisibilityConverter">` element, which determines the visibility based on the ViewModel's state.
+
+1. Select the code included in the following code snippet:
+
+	````HTML
+	<div id="answer" class="layout" data-win-bind="style.display: state Converters.showingAnswerToVisibilityConverter">
+		 <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.boolToVisibilityConverter">
+			  <span>Correct</span>
+		 </div>
+		 <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.inverseBoolToVisibilityConverter">
+			  <span>Incorrect</span>
+		 </div>
+		 <div class="next col1 row2">
+			  <button id="next">Next question</button>
+		 </div>
+	</div>
+	<div id="loading" class="layout" data-win-bind="style.display: state Converters.loadingToVisibilityConverter">
+		 <div class="title col1 row1">
+			  <span>Loading...</span>
+		 </div>
+		 <div class="progress col1 row2">
+			  <progress></progress>
+		 </div>
+	</div>
+	````
+
+	> **Speaking point:** Explain that these `<div>` elements are also bound to the ViewModel's state (using different converters).
+
+<a name="segment4" />
+### Running the application ###
+
+1. In **Solution Explorer**, right-click the **GeekQuiz.Web** project, expand the **Start** menu and select **Start new instance**.
+
+	![newInstance](Images/newinstance.png?raw=true)
+
+1. Once the site is up and running, repeat the previous step to start the **GeekQuiz** Windows Store project. The application will be launched, and once the **Loading...** message disappears, the first question will be displayed.
+
+	![app](Images/app.png?raw=true)
+
+1. Answer some questions to show how the application works.
