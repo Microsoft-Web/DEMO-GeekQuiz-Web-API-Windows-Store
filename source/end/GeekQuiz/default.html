@@ -23,36 +23,41 @@
         </header>
         <section aria-label="Main content" role="main">
             <div id="root" class="grid">
-                    <div id="question" class="layout" data-win-bind="style.display: question.answered Converters.inverseBoolToVisibilityConverter">
-                        <div class="title col1 row1">
-                            <span data-win-bind="innerText: question.title"></span>
-                        </div>
-                        <div class="option col1 row2">
-                            <button data-win-bind="innerText: question.option1.title; disabled: question.answered"></button>
-                        </div>
-                        <div class="option col2 row2">
-                            <button data-win-bind="innerText: question.option2.title; disabled: question.answered"></button>
-                        </div>
-                        <div class="option col3 row2">
-                            <button data-win-bind="innerText: question.option3.title; disabled: question.answered"></button>
-                        </div>
-                        <div class="option col4 row2">
-                            <button data-win-bind="innerText: question.option4.title; disabled: question.answered"></button>
-                        </div>
+                <div id="question" class="layout" data-win-bind="style.display: state Converters.showingQuestionToVisibilityConverter">
+                    <div class="title col1 row1">
+                        <span data-win-bind="innerText: question.title"></span>
                     </div>
-                    <div id="answer" class="layout" data-win-bind="style.display: question.answered Converters.boolToVisibilityConverter">
-                        <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.boolToVisibilityConverter">
-                            <span>Correct</span>
-                        </div>
-                        <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.inverseBoolToVisibilityConverter">
-                            <span>Incorrect</span>
-                        </div>
-                        <div class="next col1 row2">
-                            <button data-win-bind="onclick: nextQuestion">Next question</button>
-                        </div>
+                    <div class="option col1 row2">
+                        <button data-win-bind="innerText: question.option1.title; disabled: question.answered"></button>
                     </div>
-                <div id="loading" class="layout" data-win-bind="style.display: loading Converters.boolToVisibilityConverter">
-                    <progress class="title col1 row1" id="progress"></progress>
+                    <div class="option col2 row2">
+                        <button data-win-bind="innerText: question.option2.title; disabled: question.answered"></button>
+                    </div>
+                    <div class="option col3 row2">
+                        <button data-win-bind="innerText: question.option3.title; disabled: question.answered"></button>
+                    </div>
+                    <div class="option col4 row2">
+                        <button data-win-bind="innerText: question.option4.title; disabled: question.answered"></button>
+                    </div>
+                </div>
+                <div id="answer" class="layout" data-win-bind="style.display: state Converters.showingAnswerToVisibilityConverter">
+                    <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.boolToVisibilityConverter">
+                        <span>Correct</span>
+                    </div>
+                    <div class="title col1 row1" data-win-bind="style.display: question.correct Converters.inverseBoolToVisibilityConverter">
+                        <span>Incorrect</span>
+                    </div>
+                    <div class="next col1 row2">
+                        <button data-win-bind="onclick: nextQuestion">Next question</button>
+                    </div>
+                </div>
+                <div id="loading" class="layout" data-win-bind="style.display: state Converters.loadingToVisibilityConverter">
+                    <div class="title col1 row1">
+                        <span>Loading...</span>
+                    </div>
+                    <div class="progress col1 row2">
+                        <progress></progress>
+                    </div>
                 </div>
             </div>
         </section>

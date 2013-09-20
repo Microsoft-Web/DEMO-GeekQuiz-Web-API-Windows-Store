@@ -49,7 +49,7 @@
     display: -ms-grid;
     -ms-grid-columns: 25% 25% 25% 25%;
     -ms-grid-rows: 50% 50%;
-    width: 50%;
+    width: 90%;
     height: 100%;
 	-ms-grid-column-align:center;
 }
@@ -62,15 +62,28 @@
 
 .title {
     -ms-grid-column-span: 4;
-    text-align: center;
+    -ms-grid-column-align: center;
 	-ms-grid-row-align:  end;
-	font-size:   xx-large;
+	font-size: 54px;
     margin-bottom: 25px;
 }
 
-.option {
-    -ms-grid-column-align:center;
+.progress {
+    -ms-grid-column-span: 4;
+	-ms-grid-column-align:  center;
     margin-top: 25px;
+}
+
+.option {
+    -ms-grid-column-align:stretch;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.option>button, .next>button{
+    width:100%;
+    font-size: xx-large;
 }
 
 .row1{
