@@ -233,3 +233,30 @@ This demo is composed of the following segments:
 
 <a name="segment3" />
 ### Walkthrough of default.html ###
+
+1. In **Solution Explorer**, double-click **default.html** to open it in the editor.
+
+1. Select the code highlighted in the following code snippet.
+	
+	<!-- mark:3-19 -->
+	````HTML
+	<section aria-label="Main content" role="main">
+		 <div id="root" class="grid">
+			  <div id="question" class="layout" data-win-bind="style.display: state Converters.showingQuestionToVisibilityConverter">
+					<div class="title col1 row1">
+						 <span data-win-bind="innerText: question.title"></span>
+					</div>
+					<div class="option col1 row2">
+						 <button data-win-bind="innerText: question.option1.title; disabled: question.answered"></button>
+					</div>
+					<div class="option col2 row2">
+						 <button data-win-bind="innerText: question.option2.title; disabled: question.answered"></button>
+					</div>
+					<div class="option col3 row2">
+						 <button data-win-bind="innerText: question.option3.title; disabled: question.answered"></button>
+					</div>
+					<div class="option col4 row2">
+						 <button data-win-bind="innerText: question.option4.title; disabled: question.answered"></button>
+					</div>
+			  </div>
+	````
