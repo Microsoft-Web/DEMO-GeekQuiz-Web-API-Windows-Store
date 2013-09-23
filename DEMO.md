@@ -68,7 +68,7 @@ This demo is composed of the following segments:
 		 };
 	````
 
-	> **Speaking point:** Explain that we our logic is going to be in a controller object and that the UI elements are going to be updated through data-binding.  We are basically creating the controller and asking for the next questions immediatly.
+	> **Speaking point:** Explain that our logic is going to be in a controller object and that the UI elements are going to be updated through data-binding.  We are basically creating the controller and asking for the next questions immediatly.
 
 1. Highlight the following line (line #5 in the file):
 
@@ -88,7 +88,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** Explain that this the way that you can create classes with WinJS. Source [here](http://msdn.microsoft.com/en-us/library/windows/apps/br229813.aspx). The class that we are creating is a ViewModel. The set of properties of a ViewModel instance at a particular point in time represent the state of the view.
 
-1. Highlight the line highlighted in the following code snippet:
+1. Highlight the `this.apiUrl` assignment, highlighted in the following code snippet:
 	
 	<!-- mark:6 -->
 	````JavaScript
@@ -114,7 +114,7 @@ This demo is composed of the following segments:
 
 	> **Speaking point:** Explain that this is the end point of the REST API.
 
-1. Highlight the lines highlighted in the following code snippet:
+1. Highlight the `this.buttons` and `this.question` assignments, highlighted in the following code snippet:
 	
 	<!-- mark:8-18 -->
 	````JavaScript
