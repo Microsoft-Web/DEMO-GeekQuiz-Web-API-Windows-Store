@@ -1,4 +1,4 @@
-﻿# Building and Deploying an ASP.NET Application #
+﻿# Building a Windows Store front end #
 
 ## Demo ##
 
