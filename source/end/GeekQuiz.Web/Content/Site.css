@@ -67,3 +67,7 @@ div.correct p {
 div.incorrect p {
     color: red;
 }
+
+.btn {
+    border-radius: 0;
+}

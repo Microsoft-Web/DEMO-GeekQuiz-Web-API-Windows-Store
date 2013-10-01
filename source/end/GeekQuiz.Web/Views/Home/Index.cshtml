@@ -14,7 +14,7 @@
                             {{answer}}
                         </p>
                         <p>
-                            <button class="btn-info next option" {{action "nextQuestion" option}}>Next Question</button>
+                            <button class="btn btn-info btn-lg next option" {{action "nextQuestion" option}}>Next Question</button>
                         </p>
                     </div>
                     <div {{bindAttr class=":front question.answered:flip" }}>
@@ -23,7 +23,7 @@
                         </p>
                         <div class="row text-center">
                             {{#each option in question.options}}
-                                <button class="btn-info option" {{action "sendAnswer" question option}}>{{option.title}}</button>
+                                <button class="btn btn-info btn-lg option" {{action "sendAnswer" question option}}>{{option.title}}</button>
                             {{/each}}
                         </div>
                     </div>
