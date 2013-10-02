@@ -26,8 +26,8 @@ Follow these steps to setup your environment for the demo.
 
 1. Follow the steps detailed in [this link](http://docs.nuget.org/docs/creating-packages/hosting-your-own-nuget-feeds) to setup local sources for the following directories:
 
-	* **C:\Program Files (x86)\Microsoft Web Tools\Packages**
-	* **C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Stack 5\Packages**
+	1. **C:\Program Files (x86)\Microsoft Web Tools\Packages**
+	1. **C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Stack 5\Packages**
 
 	![NuGet Sources](Images/nuget-sources.png?raw=true)
 
