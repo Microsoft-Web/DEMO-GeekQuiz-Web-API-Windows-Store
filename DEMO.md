@@ -18,6 +18,7 @@ In this demo, you will see how to:
 
 - [HTML](http://www.w3schools.com/html/)
 - [WinJS](http://msdn.microsoft.com/en-us/library/windows/apps/br229773.aspx)
+- [ASP.NET Web API](www.asp.net/web-api)
 
 
 <a name="setup" />
@@ -310,3 +311,12 @@ This demo is composed of the following segments:
 	![app](Images/app.png?raw=true)
 
 1. Answer some questions to show how the application works.
+
+---
+
+<a name="summary" />
+## Summary ##
+
+By completing this demo you should have understood how you can leverage ASP.NET Web API from a Windows Store app to quickly build a front end for an existing web application.
+
+---
