@@ -1,21 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Demo xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
-	<Id>{replace_with_content_id}</Id>
-\t<Technologies>
-		<Technology>{replace_with_associated-technology}</Technology>
+	<Id>DemoGeekQuizWindowsStore</Id>
+  <Technologies>
+		<Technology>ASP.NET Web API</Technology>
 	</Technologies>
 	<Author>
-		<Name>{replace_with_content_author}</Name>
-		<Blog></Blog>
-		<Email></Email>
-	</Author>
-	<Description>{replace_with_content_description}</Description>
+    <Name>Jon Galloway</Name>
+    <Blog>http://weblogs.asp.net/jgalloway</Blog>
+    <Email>jon.galloway@microsoft.com</Email>
+  </Author>
+	<Description>This demo shows how to build a Windows Store application on top of ASP.NET Web API based HTTP services.</Description>
 	<Document ConversionType="Html">Demo.md</Document>
-	<Title>{replace_with_content_title}</Title>
+	<Title>DEMO - GeekQuiz Windows Store application</Title>
 	<Version>1.0.1</Version>
 	<Source>.\Source</Source>
-	<DependencyChecker>.\Source\Setup\Dependencies.depi</DependencyChecker>
-	<CustomProperties>
-		<Property Name="GitHubRepository" Value="https://github.com/{replace_with_organization}/{replace_with_repository}" />
-	</CustomProperties>
 </Demo>
